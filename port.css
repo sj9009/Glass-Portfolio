@@ -73,6 +73,7 @@ a{
 img{
     max-width: 100%;
     vertical-align: middle;
+    border-radius: 50%;
 }
 ul{
     list-style: none;
@@ -505,13 +506,37 @@ button{
     /* animation: bounceTop 10s ease-in-out infinite; */
 }
 
+.expimg{
+    max-width: 70px;
+    max-height: 70px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
 .columnabt {
     float: left;
     width: 50%;
   }
 
-.row1{
+.columnexp1{
+    float: left;
+    width: 20%;
+}
+
+.columnexp2{
+    /* float: left; */
+    width: 100%;
+}
+
+.abtpoint{
+    float: left;
+    width: 100%;
+}
+
+
+.rowbut{
     margin: 0 110px 20px 110px;
+    display: contents;
   }
 
 
@@ -634,7 +659,7 @@ button{
 .about-text .timeline-item{
     margin-bottom: 30px;
     position: relative;
-    padding: 10px 0 0 40px;
+    padding: 20px 0 0 30px;
 }
 
 .about-text .timeline-item::before{
@@ -915,6 +940,19 @@ button{
     }
     .pp-header h3{
         font-size: 20px;
+    }
+    .about-text{
+        font-size: 14px;
+    }
+    .btn{
+        width: 135px;
+        font-size: 14px;
+    }
+    .about-text .timeline-item h4 {
+        font-size: 15px;
+    }
+    .about-tabs{
+        text-align: center;
     }
 }
 
