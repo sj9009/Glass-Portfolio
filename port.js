@@ -12,7 +12,6 @@ function toggleNavbar(){
     document.querySelector(".header").classList.toggle("active");
 }
 
-
 // ..........Active Section ..............
 document.addEventListener("click", (e) =>{
     if(e.target.classList.contains("link-item") && e.target.hash !== ""){
@@ -35,7 +34,6 @@ document.addEventListener("click", (e) =>{
         },200);
     }
 });
-
 
 // ..........About Switch..............
 const tabsContainer = document.querySelector(".about-tabs"),
@@ -75,7 +73,6 @@ document.addEventListener("click", (e) =>{
     }
 })
 
-
 function portfolioItemDetails(portfolioItem){
     document.querySelector(".pp-thumbnail img").src =
     portfolioItem.querySelector(".portfolio-item-thumbnail img").src;
@@ -85,31 +82,4 @@ function portfolioItemDetails(portfolioItem){
 
     document.querySelector(".pp-body").innerHTML =
     portfolioItem.querySelector(".portfolio-item-details").innerHTML;
-
 }
-
-//...................Move Text...................................
-
-const textAll = document.querySelectorAll(".typewriter-effect p");
-let textNo = 1;
-
-const removeTextClasses = () => {
-  textAll.forEach((t) => {
-    t.classList.remove("active");
-  });
-};
-
-textAll[0].classList.add("active");
-
-setInterval(() => {
-  removeTextClasses();
-
-  console.log("hi");
-
-  if (textNo > textAll.length - 1) {
-    textNo = 0;
-  }
-
-  textAll[textNo].classList.add("active");
-  textNo++;
-}, 4000);

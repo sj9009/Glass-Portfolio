@@ -31,7 +31,7 @@
 body{
     min-height: 100vh;
     background-image: linear-gradient(to bottom right, var(--pink-light),var(--cyan-light));
-    font-size: 18px;
+    font-size: 16px;
     background-attachment: fixed;
     font-family:'Roboto', sans-serif;
     font-weight: 400;
@@ -137,12 +137,13 @@ section.fade-out{
     padding: 0 15px;
     width: 100%;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .section-title h2{
-    font-size: 35px;
+    font-size: 30px;
     text-transform: capitalize;
+    margin-bottom: 10px;
 }
 /* --------------------ScrollBar---------------------------- */
 
@@ -202,9 +203,8 @@ button{
 .btn:hover{
     color: var(--white);
 }
-
-.btn-view-project-btn{
-    margin-left: 50%;
+.view-project-btn{
+    margin-left: 80px;
 }
 
 /* --------------------Animation---------------------------- */
@@ -302,7 +302,6 @@ button{
     animation: bounceHori 5s ease-in-out infinite;
 }
 
-
 /* --------------------Overlay---------------------------- */
 .overlay{
     position: fixed;
@@ -318,7 +317,6 @@ button{
 .overlay.active{
     visibility: visible;
 }
-
 
 /* --------------------Header---------------------------- */
 .header{
@@ -434,7 +432,7 @@ button{
     text-align: center;
 }
 .header .nav-inner ul li a{
-    font-size: 40px;
+    font-size: 35px;
     text-transform: capitalize;
     color: var(--blue-dark);
     display: block;
@@ -510,7 +508,7 @@ button{
     max-width: 70px;
     max-height: 70px;
     margin-right: 20px;
-    margin-bottom: 20px;
+    
 }
 
 .columnabt {
@@ -521,16 +519,33 @@ button{
 .columnexp1{
     float: left;
     width: 20%;
+    margin-bottom: 35px;
 }
 
 .columnexp2{
     /* float: left; */
     width: 100%;
+    margin-bottom: 10px;
+}
+
+.columnexp3{
+    /* float: left; */
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.columnexp4{
+    /* float: left; */
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 30px;
 }
 
 .abtpoint{
     float: left;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 
@@ -553,7 +568,7 @@ button{
 
 .about-img .img-box{
     background-color: var(--white-alpha-25);
-    max-width: 300px;
+    max-width: 250px;
     border: 5px solid var(--white-alpha-40);
     margin: auto;
     border-radius: 50%;
@@ -659,7 +674,7 @@ button{
 .about-text .timeline-item{
     margin-bottom: 30px;
     position: relative;
-    padding: 20px 0 0 30px;
+    padding: 15px 0 0 30px;
 }
 
 .about-text .timeline-item::before{
@@ -678,16 +693,15 @@ button{
 }
 
 .about-text .timeline-item .date{
-    display: block;
+    /* display: block; */
+    float:right;
     color: var(--main-color);
     font-weight: 400;
-    margin: 0 0 10px;
+    /* margin: 0 0 10px; */
 }
 
 .about-text .timeline-item h4{
-    font-size: 18px;
     text-transform: capitalize;
-    margin: 0 0 10px;
 }
 .about-text .timeline-item h4 span{
     font-weight: 400;
@@ -714,14 +728,15 @@ button{
 .portfolio-item-thumbnail img{
     width: 100%;
     border-radius: 10px;
+    height: 170px;
 }
 .portfolio-item-details{
     display: none;
 }
 .portfolio-item h3{
-    font-size: 20px;
     text-transform: capitalize;
-    margin: 20px 0;
+    margin: 15px 0;
+    text-align: center;
 }
 
 /* --------------------Projects Popup---------------------------- */
@@ -804,12 +819,9 @@ button{
 }
 
 /* --------------------Contact Section---------------------------- */
-.about-img{
-    width: 40%;
-    padding: 0 20px;
-    /* animation: bounceTop 10s ease-in-out infinite; */
+lottie-player {
+    margin: 0 auto;
 }
-
 
 .contact-form,
 .contact-info{
@@ -849,16 +861,23 @@ button{
     padding-top: 15px;
 }
 .contact-info-item{
-    margin: 0 0 30px;
+    margin: 0 0 15px;
     padding: 0 0 0 20px;
     /* float: left; */
     /* width: 50%; */
 }
-.contact-info-itemmail{
-    /* margin: 0 0 30px;
-    padding: 0 0 0 20px; */
+.mail{
+    width: 50%;
     float: left;
-    /* width: 50%; */
+}
+.linker{
+    width: 30%;
+    float: left;
+    padding-top: 20px;
+}
+.linker2{
+    width: 70%;
+    float: left;
 }
 .contact-info-item h3{
     font-size: 20px;
@@ -906,6 +925,15 @@ button{
     .portfolio-item{
         width: calc(50% - 30px);
     }
+    .mail{
+        width: 100%;
+    }
+    .linker{
+        width: 100%;
+    }
+    .linker2{
+        width: 100%;
+    }
 }
 
 @media(max-width:767px) {
@@ -926,11 +954,15 @@ button{
         order: -1;
         margin-bottom: 15px;
     }
+    .portfolio-item{
+        width: calc(50% - 30px);
+    }
+
 }
 
 @media(max-width:575px) {
     .header .nav-inner ul li a{
-        font-size: 35px;
+        font-size: 30px;
     }
     .home-text h1{
         font-size: 30px;
@@ -945,8 +977,9 @@ button{
         font-size: 14px;
     }
     .btn{
-        width: 135px;
+        width: 137px;
         font-size: 14px;
+        margin-left: 80px;
     }
     .about-text .timeline-item h4 {
         font-size: 15px;
@@ -954,46 +987,15 @@ button{
     .about-tabs{
         text-align: center;
     }
+    .about-text .timeline-item .date{
+        display: block;
+        float: none;
+    }
+    .portfolio-item{
+        width: calc(100% - 30px);
+    }
+
+    .contact-info-item .social-links a {
+        margin-right: 10px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
