@@ -1,8 +1,7 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 :root{
-    --main-color:#303fff;
+    --main-color:#2f6ece;
     --blue: #0000ff;
     --blue-dark: #18293c;
     --orange: #ffa500;
@@ -14,7 +13,6 @@
     --white-alpha-25: rgba(255, 255, 255, 0.25);
     --backdrop-filter-blur: blur(5px);
 }
-
 
 *{
     box-sizing: border-box;
@@ -40,7 +38,7 @@ body{
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
     padding: 35px 15px;
-    background-image: url(qweer.png);
+    background-image: url(images/qweer.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -456,8 +454,7 @@ button{
     display: flex;
 }
 
-.home-text,
-.home-img{
+.home-text,.home-img{
     width: 50%;
     padding: 15px;
 }
@@ -472,12 +469,13 @@ button{
 .home-text h1{
     font-size: 45px;
     text-transform: capitalize;
+    margin-bottom: 10px;
 }
 .home-text h2{
     font-size: 20px;
     text-transform: capitalize;
-    font-weight: 300;
     margin: 0 0 30px;
+    font-weight: 400;
 }
 
 .home-text .btn{
@@ -497,6 +495,13 @@ button{
     border-radius: 50%;
 }
 
+.text-slider-items {
+    display: none;
+}
+
+strong {
+    font-weight: 400;
+  }
 /* --------------------About me---------------------------- */
 .about-img{
     width: 40%;
@@ -897,9 +902,26 @@ lottie-player {
     margin:10px 20px 0 0;
     transition: all 0.3s ease;
 }
-.contact-info-item .social-links a:hover{
+
+.linkq a:hover{
     color: var(--white);
-    background-color: var(--main-color);
+    background-color:#0e76a8;
+}
+.gitq a:hover{
+    color: var(--white);
+    background-color:#171515;
+}
+.behq a:hover{
+    color: var(--white);
+    background-color:#053eff;
+}
+.instq a:hover{
+    color: var(--white);
+    background-color:#E1306C;
+}
+.facq a:hover{
+    color: var(--white);
+    background-color:#3b5998;
 }
 
 /* --------------------Responsive---------------------------- */
@@ -957,7 +979,9 @@ lottie-player {
     .portfolio-item{
         width: calc(50% - 30px);
     }
-
+    .section-title{
+        margin-bottom: -20px;
+    }
 }
 
 @media(max-width:575px) {
@@ -979,6 +1003,8 @@ lottie-player {
     .btn{
         width: 137px;
         font-size: 14px;
+    }
+    .btn sub{
         margin-left: 80px;
     }
     .about-text .timeline-item h4 {
@@ -994,7 +1020,6 @@ lottie-player {
     .portfolio-item{
         width: calc(100% - 30px);
     }
-
     .contact-info-item .social-links a {
         margin-right: 10px;
     }

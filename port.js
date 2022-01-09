@@ -83,3 +83,15 @@ function portfolioItemDetails(portfolioItem){
     document.querySelector(".pp-body").innerHTML =
     portfolioItem.querySelector(".portfolio-item-details").innerHTML;
 }
+
+if ($(".text-slider").length == 1) {             
+    var typed_strings = $(".text-slider-items").text();
+
+    var typed = new Typed(".text-slider", {
+        strings:["A Software Developer ","A UI / UX Designer " ,"A Product Enthusiast "],
+        typeSpeed: 60,
+        backSpeed: 40,
+        loop: true
+    }
+    );
+}

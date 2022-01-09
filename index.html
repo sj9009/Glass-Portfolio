@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="port.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js"></script>
 </head>
 <body>
 
@@ -56,13 +56,17 @@
                 <div class="home-text">
                     <p>Hello , I'm <img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="28px" alt="hi"></p>
                     <h1>Saksham Jain</h1>
-                    <h2>Software Developer and Product Enthusiast</h2>
+                    <h2>
+                        I'm
+                        <span class="text-slider-items"></span>
+                        <strong class="text-slider"></strong>
+                    </h2>
                     <a href="#about" class="btn link-item">About Me</a>
                     <a href="#portfolio" class="btn link-item">My Resume</a>
                 </div>
                 <div class="home-img">
                     <div class="img-box">
-                        <img src="DP.jpeg" alt="profile-img"> 
+                        <img src="images/DP.jpeg" alt="profile-img"> 
                     </div>
                 </div>
             </div>
@@ -81,7 +85,7 @@
             <div class="row">
                 <div class="about-img">
                     <div class="img-box">
-                        <img src="DP12.png" alt="about-img">   
+                        <img src="images/DP12.png" alt="about-img">   
                     </div>  
                     <br>         
                     <div class="rowbut">
@@ -121,7 +125,7 @@
                     <div class="timeline">
                         <div class="timeline-item" >
                             <div class="columnexp1 expimg">
-                                <img src="iiitv.png" alt="IIIT Vadodara">
+                                <img src="images/iiitv.png" alt="IIIT Vadodara">
                             </div>
                             <div class="columnexp2">                                
                                 <h4>B.Tech - Computer Science <span class="date">2018 - Present</span></h4>
@@ -130,7 +134,7 @@
                         </div>
                         <div class="timeline-item">
                             <div class="columnexp1 expimg">
-                                <img src="rkvm.png" alt="RKVM">
+                                <img src="images/rkvm.png" alt="RKVM">
                             </div>
                             <div class="columnexp2">                              
                                 <h4>Higher Secondary School <span class="date">2015 - 2017</span></h4>
@@ -139,7 +143,7 @@
                         </div>
                         <div class="timeline-item">
                             <div class="columnexp1 expimg">
-                                <img src="vbps.png" alt="VBPS">
+                                <img src="images/vbps.png" alt="VBPS">
                             </div>
                             <div class="columnexp2">                              
                                 <h4>Secondary School <span class="date">2005 - 2015</span></h4>
@@ -154,7 +158,7 @@
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="columnexp1 expimg mar">
-                                <img src="prix.png" alt="prixled">
+                                <img src="images/prix.png" alt="prixled">
                             </div>
                             <div class="columnexp2">
                                 <h4>UI Design & Developer Intern<span class="date">June 2021 - August 2021</span></h4>
@@ -173,7 +177,7 @@
                         </div>
                         <div class="timeline-item">
                             <div class="columnexp1 expimg mar">
-                                <img src="olac.png" alt="olcademy">
+                                <img src="images/olac.png" alt="olcademy">
                             </div>
                             <div class="columnexp2">
                                 <h4>UX Analyst Intern<span class="date">May 2021 - August 2021</span></h4>
@@ -212,7 +216,7 @@
                 <!-- ................Project Comp..................... -->
                 <div class="portfolio-item">
                     <div class="portfolio-item-thumbnail">
-                        <img src="pro1.png" alt="portfolio item thumb">
+                        <img src="images/pro1.png" alt="portfolio item thumb">
                     </div>
                     <h3 class="portfolio-item-title">USON Mechanics</h3>
                     <button type="button" class="btn view-project-btn">View Details</button>
@@ -234,7 +238,7 @@
                 <!-- ................Project Comp..................... -->
                 <div class="portfolio-item">
                     <div class="portfolio-item-thumbnail">
-                        <img src="pro2.png" alt="portfolio item thumb">
+                        <img src="images/pro2.png" alt="portfolio item thumb">
                     </div>
                     <h3 class="portfolio-item-title">Plagairism Checker</h3>
                     <button type="button" class="btn view-project-btn">View Details</button>
@@ -256,7 +260,7 @@
                 <!-- ................Project Comp..................... -->
                 <div class="portfolio-item">
                     <div class="portfolio-item-thumbnail">
-                        <img src="pro3.png" alt="portfolio item thumb">
+                        <img src="images/pro3.png" alt="portfolio item thumb">
                     </div>
                     <h3 class="portfolio-item-title">Haiykyu Fanpage</h3>
                     <button type="button" class="btn view-project-btn">View Details</button>
@@ -288,7 +292,7 @@
                 </div>
             </div>  
             <div class="row">
-                <div class="contact-form">
+                <div class="contact-form" method="post" action="https://formspree.io/f/mrgjbvrb">
                     <form>
                         <div class="row">
                         <div class="input-group">
@@ -304,7 +308,7 @@
                             <textarea placeholder="Message" class="input-control" required></textarea>
                         </div>
                         <div class="input-group">
-                            <button type="submit" class="btn">Submit</button>
+                            <button type="submit" class="btn sub">Submit</button>
                         </div>
                         </div>
                     </form>               
@@ -327,11 +331,11 @@
                     </div>
                     <div class="contact-info-item linker2">
                         <div class="social-links">
-                            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-behance"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <span class="linkq"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                            <span class="gitq"><a href="#" target="_blank"><i class="fab fa-github"></i></a></span>
+                            <span class="behq"><a href="#" target="_blank"><i class="fab fa-behance"></i></a></span>
+                            <span class="instq"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></span>
+                            <span class="facq"><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></span>
                         </div>  
                     </div>                                                     
                     </div>   
@@ -350,7 +354,7 @@
             <div class="pp-header">
                 <button type="button" class="btn pp-close fixer"><i class="fas fa-times"></i></button>
                 <div class="pp-thumbnail">
-                    <img src="3.jpg" alt="pp-thumbnail">
+                    <img src="images/pro3.png" alt="pp-thumbnail">
                 </div>
                 <h3></h3>
             </div>
