@@ -84,14 +84,51 @@ function portfolioItemDetails(portfolioItem){
     portfolioItem.querySelector(".portfolio-item-details").innerHTML;
 }
 
-if ($(".text-slider").length == 1) {             
-    var typed_strings = $(".text-slider-items").text();
-
-    var typed = new Typed(".text-slider", {
+$(function(){
+    $(".text-slider").typed({            
         strings:["A Software Developer ","A UI / UX Designer " ,"A Product Enthusiast "],
-        typeSpeed: 60,
-        backSpeed: 40,
-        loop: true
+        typeSpeed: 20,
+        backSpeed: 10,
+        loop: true,
+    });
+});
+
+const checkbox = document.getElementById('checkbox');
+checkbox.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode');
+});
+
+var element = document.getElementsByClassName('skill-item');
+checkbox.addEventListener('change', () => {
+    for (var i = 0; i < element.length; i++) {
+        if(checkbox.checked==true) {
+            element[i].style.backgroundColor="var(--dar-black)";
+        }
+        else{
+            element[i].style.backgroundColor="var(--white-alpha-25)";
+        }
+}});
+
+var elem = document.getElementsByClassName('btn');
+checkbox.addEventListener('change', () => {
+    for (var i = 0; i < elem.length; i++) {
+        elem[i].classList.toggle('dark-btn');
     }
-    );
-}
+});
+
+var elemq = document.getElementsByClassName('btn');
+checkbox.addEventListener('change', () => {
+    for (var i = 0; i < elemq.length; i++) {
+        elemq[i].classList.toggle('dark-btn:hover');
+    }
+});
+
+var image = document.getElementById('logo');
+checkbox.addEventListener('change', () => {
+    if (image.src.match("images/logo-light.png")) {
+        image.src = "images/logo-dark.png";
+    }
+    else {
+        image.src = "images/logo-light.png";
+    }
+});

@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 :root{
-    --main-color:#2f6ece;
-    --blue: #0000ff;
+    --main-color:#245eb4;
     --blue-dark: #18293c;
+    --dar-black:#252525;
     --orange: #ffa500;
     --green-yellow: #cddc39;
     --pink-light: #efa2b4;
@@ -26,6 +26,14 @@
     box-sizing: border-box;
 }
 
+.dark-mode {
+    background-image: url(images/qweer.jpg);
+    --main-color:white;
+    color:white;
+    --white-alpha-25: rgba(255, 255, 255, 0.05);
+}
+
+
 body{
     min-height: 100vh;
     background-image: linear-gradient(to bottom right, var(--pink-light),var(--cyan-light));
@@ -41,6 +49,7 @@ body{
     background-image: url(images/qweer.png);
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background-image 0.3s linear;
 }
 
 body.hide-scrolling{
@@ -71,7 +80,6 @@ a{
 img{
     max-width: 100%;
     vertical-align: middle;
-    border-radius: 50%;
 }
 ul{
     list-style: none;
@@ -126,8 +134,89 @@ section.fade-out{
     padding: 50px 0;
 }
 
-.flex-end{
-    justify-content: flex-end;
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(211, 211, 211);
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: 0 0 2px black;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: black;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 2px black;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .fa-moon {
+	color: #f1c40f;
+    width: 20px;
+    height: 20px;
+    margin-top:10px;
+    margin-left: 10px;
+}
+
+.fa-sun {
+	color: #fffb00;
+    width: 20px;
+    height: 20px;
+    margin-top:10px;
+}
+
+.logo{
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 5px; ;
 }
 
 /* --------------------Sec Title---------------------------- */
@@ -135,13 +224,13 @@ section.fade-out{
     padding: 0 15px;
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .section-title h2{
     font-size: 30px;
     text-transform: capitalize;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 /* --------------------ScrollBar---------------------------- */
 
@@ -161,6 +250,7 @@ button{
     user-select: none;
 }
 
+
 .btn{
     line-height:1.5 ;
     background-color: var(--white-alpha-25);
@@ -168,7 +258,7 @@ button{
     padding: 10px 28px;
     display: inline-block;
     border-radius: 30px;
-    color: var(--main-color);
+    color: var(--blue-dark);
     font-weight: 500;
     text-transform: capitalize;
     font-family: inherit;
@@ -183,6 +273,12 @@ button{
     text-align: center;
 }
 
+.dark-btn {
+    background-color: #252525;
+    color:white;
+}
+
+
 .btn::before{
     content: '';
     position: absolute;
@@ -190,19 +286,24 @@ button{
     top: 0;
     height: 100%;
     width: 0%;
-    background-color: var(--main-color);
+    background-color:var(--main-color);
     z-index: -1;
     transition: width 0.3s ease;
+}
+
+.dark-btn::before{
+    background-color:white;
 }
 
 .btn:hover::before{
     width: 100%;
 }
 .btn:hover{
-    color: var(--white);
+    color: white;
 }
-.view-project-btn{
-    margin-left: 80px;
+
+.dark-btn:hover{
+    background-color:black;
 }
 
 /* --------------------Animation---------------------------- */
@@ -432,7 +533,7 @@ button{
 .header .nav-inner ul li a{
     font-size: 35px;
     text-transform: capitalize;
-    color: var(--blue-dark);
+    color:black;
     display: block;
     font-weight: 500;
     padding: 8px 15px;
@@ -464,7 +565,7 @@ button{
 }
 
 .home-text p{
-    font-size: 18px;
+    font-size: 25px;
 }
 .home-text h1{
     font-size: 45px;
@@ -506,19 +607,31 @@ strong {
 .about-img{
     width: 40%;
     padding: 0 20px;
+    text-align: center;
     /* animation: bounceTop 10s ease-in-out infinite; */
+}
+
+.complogo{
+    border-radius: 50%;
 }
 
 .expimg{
     max-width: 70px;
     max-height: 70px;
     margin-right: 20px;
-    
 }
+
+.columnham {
+    float: left;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
 
 .columnabt {
     float: left;
     width: 50%;
+    display: flex;
   }
 
 .columnexp1{
@@ -528,13 +641,11 @@ strong {
 }
 
 .columnexp2{
-    /* float: left; */
     width: 100%;
     margin-bottom: 10px;
 }
 
 .columnexp3{
-    /* float: left; */
     width: 100%;
     margin-top: 5px;
     margin-bottom: 20px;
@@ -553,13 +664,6 @@ strong {
     margin-bottom: 10px;
 }
 
-
-.rowbut{
-    margin: 0 110px 20px 110px;
-    display: contents;
-  }
-
-
 .about-text{
     width: 60%;
     padding: 0 15px;
@@ -573,7 +677,7 @@ strong {
 
 .about-img .img-box{
     background-color: var(--white-alpha-25);
-    max-width: 250px;
+    max-width: 220px;
     border: 5px solid var(--white-alpha-40);
     margin: auto;
     border-radius: 50%;
@@ -723,25 +827,28 @@ strong {
 .portfolio-item{
     width: calc((100% / 3) - 30px);
     margin: 0 15px 30px;
+    text-align: center;
 }
 .portfolio-item-thumbnail{
     padding: 10px;
     background-color: var(--white-alpha-25);
     border: 1px solid var(--white-alpha-40);
     border-radius: 10px;
+    text-align: center;
 }
 .portfolio-item-thumbnail img{
     width: 100%;
     border-radius: 10px;
     height: 170px;
+    text-align: center;
 }
 .portfolio-item-details{
     display: none;
 }
 .portfolio-item h3{
     text-transform: capitalize;
-    margin: 15px 0;
-    text-align: center;
+    margin-top: 10px;
+    margin-bottom: -5px;
 }
 
 /* --------------------Projects Popup---------------------------- */
@@ -768,7 +875,7 @@ strong {
 .pp-content{
     background-color: var(--white-alpha-25);
     padding: 30px;
-    border-radius: 30px;
+    border-radius: 20px;
     max-width: 900px;
     width: 100%;
     border: 1px solid var(--white-alpha-40);
@@ -797,15 +904,13 @@ strong {
     top: -40px;
 }
 .pp-thumbnail img{
-    border-radius: 10px;
-}
-.fixer{
-    background-color:var(--main-color);
+    border-radius: 5px;
 }
 .pp-header h3{
     font-size: 25px;
     text-transform: capitalize;
     margin: 20px 0 15px;
+    text-align: center;
 }
 .pp-body .description{
     margin-bottom: 20px;
@@ -821,6 +926,9 @@ strong {
 .pp-body .general-info li a{
     text-transform: lowercase;
     color: var(--main-color);
+}
+.view-project-btn{
+    margin-top: 15px;
 }
 
 /* --------------------Contact Section---------------------------- */
@@ -848,12 +956,12 @@ lottie-player {
     font-size: 16px;
     background-color: var(--white-alpha-25);
     padding: 0 20px;
-    color: var(--blue-dark);
+    color: var(--main-color);
     border: 1px solid transparent;
     transition: border-color 0.3s ease-in-out;
 }
 .contact-form .input-control::placeholder{
-    color: var(--blue-dark);
+    color: var(--main-color);
     opacity: 0.8;
     font-weight: 300;
 }
@@ -956,6 +1064,15 @@ lottie-player {
     .linker2{
         width: 100%;
     }
+    .logo{
+        margin-left:20px; ;
+    }
+    
+}
+@media(min-width:767px) {
+    .margi{
+        margin: 5px;
+    }
 }
 
 @media(max-width:767px) {
@@ -981,6 +1098,7 @@ lottie-player {
     }
     .section-title{
         margin-bottom: -20px;
+        margin-top:30px;
     }
 }
 
@@ -1004,8 +1122,9 @@ lottie-player {
         width: 137px;
         font-size: 14px;
     }
-    .btn sub{
+    .sub{
         margin-left: 80px;
+        margin-bottom:-40px;
     }
     .about-text .timeline-item h4 {
         font-size: 15px;

@@ -10,10 +10,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/typed.js/1.1.4/typed.min.js"></script>
+    
 </head>
 <body>
-
 
  <!-- ................Overlay..................... -->
 <div class="overlay"></div>
@@ -31,10 +33,24 @@
     <!-- ................Hamburger..................... -->
     <header class="header">
         <div class="container">
-            <div class="row flex-end">
-                <button type="button" class="nav-toggler">
-                    <span></span>
-                </button>
+            <div class="row ">
+                <div class="columnabt">
+                    <div class="logo" >
+                        <img src="images/logo-light.png" id="logo"alt="logo"> 
+                    </div>                 
+                    <label class="switch">
+                        <input type="checkbox" id="checkbox">
+                        <span class="slider round">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </span>  
+                    </label>
+                </div>
+                <div class="columnham">
+                    <button type="button" class="nav-toggler flex-end">
+                        <span></span>
+                    </button>
+                </div>
                 <nav class="nav">
                     <div class="nav-inner">
                         <ul>
@@ -54,14 +70,14 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="home-text">
-                    <p>Hello , I'm <img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="28px" alt="hi"></p>
+                    <p>Hi , I'm <img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="28px" alt="hi"></p>
                     <h1>Saksham Jain</h1>
                     <h2>
                         I'm
                         <span class="text-slider-items"></span>
                         <strong class="text-slider"></strong>
                     </h2>
-                    <a href="#about" class="btn link-item">About Me</a>
+                    <a href="#about" id="kiki" class="btn link-item">About Me</a>
                     <a href="#portfolio" class="btn link-item">My Resume</a>
                 </div>
                 <div class="home-img">
@@ -86,18 +102,16 @@
                 <div class="about-img">
                     <div class="img-box">
                         <img src="images/DP12.png" alt="about-img">   
-                    </div>  
-                    <br>         
-                    <div class="rowbut">
-                        <a href="cv.pdf" class="btn" target="blank">My Projects</a>&nbsp;&nbsp;
-                        <a href="#contact" class="btn link-item">Contact Me</a>  
-                    </div>                            
+                    </div>  <br>                                           
+                    <a href="cv.pdf" class="btn margi" target="blank">My Projects</a>
+                    <a href="#contact" class="btn margi ">Contact Me</a>                       
                 </div>
 
                 <div class="about-text">
                     <p>
-                        I am a Frontend Web Developer and a Product Enthusiast. Skilled in AdobeXD, Java, HTML, CSS, JavaScript, ReactJS. Possessing good Research, Analytical, Product Management and Problem Solving Skills. <br> <br>
-                        I strive to shape ideas & imagination into responsive, interactive and user friendly Interfaces by developing Wire frames and Prototypes of Apps and Websites using my integrated knowledge and experience of Design and Development.
+                        I'm a Final Year Computer Science student with good Research, Analytical, Problem Solving and Product 
+                        Management skills.<br><br>
+                        I strive to shape ideas into responsive, interactive and user friendly Interfaces by Designing and Developing Wire frames and Prototypes of Apps and Websites with integrated Knowledge and Experience of Design and Technology.
                     </p>
                     <h3>Languages</h3>
                     <div class="skills">
@@ -125,29 +139,29 @@
                     <div class="timeline">
                         <div class="timeline-item" >
                             <div class="columnexp1 expimg">
-                                <img src="images/iiitv.png" alt="IIIT Vadodara">
+                                <img src="images/iiitv.png" class="complogo" alt="IIIT Vadodara">
                             </div>
                             <div class="columnexp2">                                
                                 <h4>B.Tech - Computer Science <span class="date">2018 - Present</span></h4>
-                                Indian Institute of Information Technology Vadodara<br>Grade :- 7.92
+                                Indian Institute of Information Technology Vadodara<br>CGPA : 7.98 / 10 ( Till 7th Sem )
                             </div>                                                        
                         </div>
                         <div class="timeline-item">
                             <div class="columnexp1 expimg">
-                                <img src="images/rkvm.png" alt="RKVM">
+                                <img src="images/rkvm.png" class="complogo" alt="RKVM">
                             </div>
                             <div class="columnexp2">                              
                                 <h4>Higher Secondary School <span class="date">2015 - 2017</span></h4>
-                                Ramakrishna Vidya Mandir , Gwalior<br>Grade :- 76.6%
+                                Ramakrishna Vidya Mandir , Gwalior<br>Percentage : 76.6%
                             </div> 
                         </div>
                         <div class="timeline-item">
                             <div class="columnexp1 expimg">
-                                <img src="images/vbps.png" alt="VBPS">
+                                <img src="images/vbps.png" class="complogo" alt="VBPS">
                             </div>
                             <div class="columnexp2">                              
                                 <h4>Secondary School <span class="date">2005 - 2015</span></h4>
-                                Vidya Bhavan Public School , Gwalior<br>Grade :- 9.60
+                                Vidya Bhavan Public School , Gwalior<br>CGPA : 9.6 / 10
                             </div>                           
                         </div>
                     </div>
@@ -167,10 +181,10 @@
                                 </div>
                                 <p class="abtpoint">
                                     <ul>
-                                        <li>• Designed Wire frames and Prototypes of Prixled Contests Module based on
-                                        Requirement Analysis, Competitor Analysis, User Flows and UX Research.</li><br>
-                                        <li>• Worked with Technical Team to enhance the User Experience of Prixled Beta
-                                        Website by identifying bugs and making UI and styling improvements.</li>
+                                        <li>• Worked on Requirement and Competitor Analysis, User Flows, Information
+                                            Architecture and Designed Wire frames and Prototypes of Prixled Contests.</li><br>
+                                        <li>• Worked with Technical Team to enhance the UX of Prixled Website by making
+                                            UI improvements</li>
                                     </ul>
                                 </p>
                             </div>                          
@@ -182,16 +196,14 @@
                             <div class="columnexp2">
                                 <h4>UX Analyst Intern<span class="date">May 2021 - August 2021</span></h4>
                                 <div class="columnexp4">
-                                    Olcadmey
+                                    Olcademy
                                 </div>
                                 <p class="abtpoint">
                                     <ul>
                                         <li>• Worked with the Business Analyst team on Internal Analysis, Competitor
-                                            Analysis and UML Diagrams of new and existing modules of Olcademy.</li><br>
-                                        <li>• Based on the User Research , designed high fidelity Wire frames and
-                                            Prototypes for Referral System and Feedback form.</li><br>
-                                        <li>• Redesigned high fidelity responsive Wire frames and Prototypes of Course
-                                            Description Ecosystem for website and mobile application.</li>
+                                            Analysis and UML Diagrams of new and existing modules.</li><br>
+                                        <li>• Designed Wireframes for Referral System , Feedback form and Course
+                                            Description page for website and mobile application.</li>
                                     </ul>
                                 </p>
                             </div>                      
@@ -216,10 +228,9 @@
                 <!-- ................Project Comp..................... -->
                 <div class="portfolio-item">
                     <div class="portfolio-item-thumbnail">
-                        <img src="images/pro1.png" alt="portfolio item thumb">
-                    </div>
-                    <h3 class="portfolio-item-title">USON Mechanics</h3>
-                    <button type="button" class="btn view-project-btn">View Details</button>
+                        <img src="images/pro1.jpg" alt="portfolio item thumb">
+                        <h3 class="portfolio-item-title">USON Mechanics</h3>  
+                    <button type="button" class="btn view-project-btn">View Details</button>  
                     <div class="portfolio-item-details">
                         <div class="description">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem eveniet non laborum eum, reprehenderit unde laboriosam expedita labore. Quis fuga pariatur et suscipit perspiciatis quaerat officiis delectus. Excepturi, id.</p>
@@ -233,15 +244,15 @@
                             </ul>
                         </div>
                     </div>
+                    </div>    
                 </div>
 
                 <!-- ................Project Comp..................... -->
                 <div class="portfolio-item">
                     <div class="portfolio-item-thumbnail">
-                        <img src="images/pro2.png" alt="portfolio item thumb">
-                    </div>
-                    <h3 class="portfolio-item-title">Plagairism Checker</h3>
-                    <button type="button" class="btn view-project-btn">View Details</button>
+                        <img src="images/pro2.jpg" alt="portfolio item thumb">
+                        <h3 class="portfolio-item-title">Plagairism Checker</h3>
+                        <button type="button" class="btn view-project-btn">View Details</button>
                     <div class="portfolio-item-details">
                         <div class="description">
                             <p>masw Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem eveniet non laborum eum, reprehenderit unde laboriosam expedita labore. Quis fuga pariatur et suscipit perspiciatis quaerat officiis delectus. Excepturi, id.</p>
@@ -254,27 +265,28 @@
                                 <li>View Project - <span><a href="_blank">www.poke.com</a></span></li>
                             </ul>
                         </div>
-                    </div>
+                    </div>    
+                    </div>               
                 </div>
 
                 <!-- ................Project Comp..................... -->
                 <div class="portfolio-item">
                     <div class="portfolio-item-thumbnail">
-                        <img src="images/pro3.png" alt="portfolio item thumb">
-                    </div>
-                    <h3 class="portfolio-item-title">Haiykyu Fanpage</h3>
-                    <button type="button" class="btn view-project-btn">View Details</button>
-                    <div class="portfolio-item-details">
-                        <div class="description">
-                            <p> dcksc Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem eveniet non laborum eum, reprehenderit unde laboriosam expedita labore. Quis fuga pariatur et suscipit perspiciatis quaerat officiis delectus. Excepturi, id.</p>
-                        </div>
-                        <div class="general-info">
-                            <ul>
-                                <li>Created - <span>4 Dec 2022</span></li>
-                                <li>Technologies Used - <span>HTML , CSS ,</span></li>
-                                <li>Role - <span>Design</span></li>
-                                <li>View Project - <span><a href="_blank">www.poke.com</a></span></li>
-                            </ul>
+                        <img src="images/pro3.jpg" alt="portfolio item thumb">
+                        <h3 class="portfolio-item-title">Haiykyu Fanpage</h3>
+                        <button type="button" class="btn view-project-btn">View Details</button>
+                        <div class="portfolio-item-details">
+                            <div class="description">
+                                <p> dcksc Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem eveniet non laborum eum, reprehenderit unde laboriosam expedita labore. Quis fuga pariatur et suscipit perspiciatis quaerat officiis delectus. Excepturi, id.</p>
+                            </div>
+                            <div class="general-info">
+                                <ul>
+                                    <li>Created - <span>4 Dec 2022</span></li>
+                                    <li>Technologies Used - <span>HTML , CSS ,</span></li>
+                                    <li>Role - <span>Design</span></li>
+                                    <li>View Project - <span><a href="_blank">www.poke.com</a></span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -288,27 +300,27 @@
         <div class="container">
             <div class="row">
                 <div class="section-title">
-                    <h2>Contact Me</h2>
+                    <h2 class="contan">Contact Me</h2>
                 </div>
             </div>  
             <div class="row">
-                <div class="contact-form" method="post" action="https://formspree.io/f/mrgjbvrb">
-                    <form>
+                <div class="contact-form">
+                    <form method="POST" action="https://formspree.io/f/mrgjbvrb">
                         <div class="row">
                         <div class="input-group">
-                            <input type="text" placeholder="Name" class="input-control" required>
+                            <input type="text" name="name" placeholder="Name" class="input-control" required>
                         </div>
                         <div class="input-group">
-                            <input type="email" placeholder="Email" class="input-control" required>
+                            <input type="email" name="_replyto" placeholder="Email" class="input-control" required>
                         </div>
                         <div class="input-group">
-                            <input type="text" placeholder="Subject" class="input-control" required>
+                            <input type="text" name="subject" placeholder="Subject" class="input-control" required>
                         </div>
                         <div class="input-group">
                             <textarea placeholder="Message" class="input-control" required></textarea>
                         </div>
                         <div class="input-group">
-                            <button type="submit" class="btn sub">Submit</button>
+                            <button type="submit" class="btn sub" value="Send">Submit</button>
                         </div>
                         </div>
                     </form>               
@@ -327,15 +339,15 @@
                         <p>+91 9174775456 / 9425307306</p>
                     </div>
                     <div class="contact-info-item linker">
-                        <h3>Reach me at</h3>
+                        <h3>Reach Me At</h3>
                     </div>
                     <div class="contact-info-item linker2">
                         <div class="social-links">
-                            <span class="linkq"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></span>
-                            <span class="gitq"><a href="#" target="_blank"><i class="fab fa-github"></i></a></span>
-                            <span class="behq"><a href="#" target="_blank"><i class="fab fa-behance"></i></a></span>
-                            <span class="instq"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></span>
-                            <span class="facq"><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></span>
+                            <span class="sl linkq"><a href="https://www.linkedin.com/in/saksham9009/" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                            <span class="sl gitq"><a href="https://github.com/sj9009" target="_blank"><i class="fab fa-github"></i></a></span>
+                            <span class="sl behq"><a href="#" target="_blank"><i class="fab fa-behance"></i></a></span>
+                            <span class="sl instq"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></span>
+                            <span class="sl facq"><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></span>
                         </div>  
                     </div>                                                     
                     </div>   
@@ -352,9 +364,9 @@
     <div class="pp-inner">
         <div class="pp-content">
             <div class="pp-header">
-                <button type="button" class="btn pp-close fixer"><i class="fas fa-times"></i></button>
+                <button type="button" class="btn pp-close "><i class="fas fa-times"></i></button>
                 <div class="pp-thumbnail">
-                    <img src="images/pro3.png" alt="pp-thumbnail">
+                    <img src="images/pro3.jpg" alt="pp-thumbnail">
                 </div>
                 <h3></h3>
             </div>
